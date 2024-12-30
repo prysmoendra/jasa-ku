@@ -215,9 +215,10 @@
             </div>
         </div>
 
+        {{-- the tolerant line of limit --}}
         <div class="flex flex-col items-center min-h-screen mt-[160px] bg-green-100">
-            {{-- the tolerant line of limit --}}
-            <div class="bg-gray-300 w-full h-10"></div>
+            <div class="bg-gray-300 w-full h-6"></div>
+            {{-- # carousel image banner --}}
             <div class="promo-banner bg-red-100 w-[1208px] h-[302px]">
 
                 <div class="container mx-auto">
@@ -256,7 +257,73 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-gray-300 w-full h-10"></div>
+            <div class="bg-gray-300 w-full h-6"></div>
+            {{-- # all list category --}}
+            <div class="list-category bg-white w-[1208px] h-[302px] rounded-xl shadow-md p-4 flex flex-col">
+                <h1 class="text-2xl font-extrabold tracking-tight">Kategori Pilihan</h1>
+                <div class="bg-gray-200 w-full h-full p-2 overflow-x-auto">
+                    <div class="flex space-x-6">
+                        <!-- Example categories (replace with your actual categories) -->
+                        <div class="flex-shrink-0 flex items-center bg-white shadow-md rounded-lg p-4" style="width: 290px; height: 112px;">
+                            <img src="/path/to/icon1.png" alt="Service AC & Perbaikan" class="w-20 h-20">
+                            <div class="ml-4">
+                                <h2 class="text-lg font-bold">Service AC & Perbaikan</h2>
+                                <p class="text-gray-500">794 Penyedia jasa</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 flex items-center bg-white shadow-md rounded-lg p-4" style="width: 290px; height: 112px;">
+                            <img src="/path/to/icon2.png" alt="Servis Elektronik" class="w-20 h-20">
+                            <div class="ml-4">
+                                <h2 class="text-lg font-bold">Servis Elektronik</h2>
+                                <p class="text-gray-500">608 Penyedia jasa</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 flex items-center bg-white shadow-md rounded-lg p-4" style="width: 290px; height: 112px;">
+                            <img src="/path/to/icon3.png" alt="Kontraktor Bangunan" class="w-20 h-20">
+                            <div class="ml-4">
+                                <h2 class="text-lg font-bold">Kontraktor Bangunan</h2>
+                                <p class="text-gray-500">298 Penyedia jasa</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 flex items-center bg-white shadow-md rounded-lg p-4" style="width: 290px; height: 112px;">
+                            <img src="/path/to/icon4.png" alt="Renovasi Rumah" class="w-20 h-20">
+                            <div class="ml-4">
+                                <h2 class="text-lg font-bold">Renovasi Rumah</h2>
+                                <p class="text-gray-500">290 Penyedia jasa</p>
+                            </div>
+                        </div>
+                        <!-- Add more categories as needed -->
+                        <div class="flex-shrink-0 flex items-center bg-white shadow-md rounded-lg p-4" style="width: 290px; height: 112px;">
+                            <img src="/path/to/icon5.png" alt="Category 5" class="w-20 h-20">
+                            <div class="ml-4">
+                                <h2 class="text-lg font-bold">Category 5</h2>
+                                <p class="text-gray-500">Number of Providers</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 flex items-center bg-white shadow-md rounded-lg p-4" style="width: 290px; height: 112px;">
+                            <img src="/path/to/icon6.png" alt="Category 6" class="w-20 h-20">
+                            <div class="ml-4">
+                                <h2 class="text-lg font-bold">Category 6</h2>
+                                <p class="text-gray-500">Number of Providers</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 flex items-center bg-white shadow-md rounded-lg p-4" style="width: 290px; height: 112px;">
+                            <img src="/path/to/icon7.png" alt="Category 7" class="w-20 h-20">
+                            <div class="ml-4">
+                                <h2 class="text-lg font-bold">Category 7</h2>
+                                <p class="text-gray-500">Number of Providers</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 flex items-center bg-white shadow-md rounded-lg p-4" style="width: 290px; height: 112px;">
+                            <img src="/path/to/icon8.png" alt="Category 8" class="w-20 h-20">
+                            <div class="ml-4">
+                                <h2 class="text-lg font-bold">Category 8</h2>
+                                <p class="text-gray-500">Number of Providers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     
         <div class="p-8">
