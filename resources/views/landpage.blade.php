@@ -238,10 +238,10 @@
                                 </div>
                             @endforeach
 
-                            <button class="carousel-button carousel-button-left rounded-full h-10 w-10 items-center flex justify-center" id="prevButton">
+                            <button class="carousel-button carousel-button-left rounded-full h-10 w-10 items-center flex justify-center hover:scale-105 -translate-y-6" id="prevButton">
                                 <i class="bi bi-chevron-left text-xl text-gray-400"></i>
                             </button>
-                            <button class="carousel-button carousel-button-right rounded-full h-10 w-10 items-center flex justify-center" id="nextButton">
+                            <button class="carousel-button carousel-button-right rounded-full h-10 w-10 items-center flex justify-center hover:scale-105 -translate-y-6" id="nextButton">
                                 <i class="bi bi-chevron-right text-xl text-gray-400"></i>
                             </button>
 
