@@ -333,6 +333,8 @@
                     </div>
                 </div>
             </div>
+
+            {{-- FEATURE DETAIL REGISTRATION --}}
             <div class="flex mt-10">
                 <div class="w-[473px] h-[584px] bg-orange-400 p-12 text-white mr-6 rounded-xl flex flex-col justify-end">
                     <h1 class="font-bold text-4xl text-white">Semua hanya di JasaKu</h1>
@@ -357,6 +359,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class=""></div>
         </div>
     
         <div class="p-8">
