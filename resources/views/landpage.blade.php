@@ -217,9 +217,10 @@
 
         {{-- the tolerant line of limit --}}
         <div class="flex flex-col items-center min-h-screen mt-[160px]">
-            {{-- # carousel image banner --}}
-            <div class="promo-banner w-[1208px] h-[302px] mt-6">
 
+            {{-- FEATURE IMAGE BANNER SLIDER --}}
+            <div class="promo-banner w-[1208px] h-[302px] mt-6">
+                {{-- # carousel image banner --}}
                 <div class="container mx-auto">
                     <div class="carousel relative">
                         <div class="carousel-inner relative w-full">
