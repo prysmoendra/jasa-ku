@@ -109,7 +109,7 @@
         {{-- top position --}}
         <div id="header-main-wrapper" class="relative">
             {{-- #fixed section --}}
-            <div class="fixed top-0 left-0 right-0 bg-white z-20">
+            <div class="fixed top-0 left-0 right-0 z-20 border-b-2 bg-gray-100">
 
                 {{-- Top #1 --}}
                 <div class="flex justify-between items-center h-20 pl-20 pr-20">
@@ -143,7 +143,7 @@
                 </div>
 
                 {{-- Top #2 --}}
-                <div id="search-bar" class="flex justify-center items-center justify-items-center w-full h-20 drop-shadow-md bg-blue-300">
+                <div id="search-bar" class="flex justify-center items-center justify-items-center w-full h-20 drop-shadow-md">
                     <input type="text" placeholder="Search..." class="w-[50%] px-5 py-5 h-[66px] border border-gray-300 rounded-full shadow-sm">
                 </div>
 
@@ -216,10 +216,11 @@
         </div>
 
         {{-- the tolerant line of limit --}}
-        <div class="flex flex-col items-center min-h-screen mt-[160px] bg-green-100">
-            <div class="bg-gray-300 w-full h-6"></div>
+        <div class="flex flex-col items-center min-h-screen mt-[160px]">
+            {{-- REMOVE IT LATER FOR MARGIN TOP --}}
+            <div class="w-full h-6"></div> 
             {{-- # carousel image banner --}}
-            <div class="promo-banner bg-red-100 w-[1208px] h-[302px]">
+            <div class="promo-banner w-[1208px] h-[302px]">
 
                 <div class="container mx-auto">
                     <div class="carousel relative">
@@ -257,14 +258,15 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-gray-300 w-full h-6"></div>
+            {{-- REMOVE IT LATER FOR MARGIN TOP --}}
+            <div class="w-full h-6"></div>
             {{-- # all list category --}}
             <div class="list-category w-[1208px] h-[312px] rounded-xl py-4 flex flex-col justify-start items-start">
                 <div class="flex flex-row justify-between items-center w-full">
                     <div class="flex justify-items-start">
                         <h1 class="text-2xl font-extrabold tracking-tight w-full py-2 bg-white">Kategori Pilihan</h1>
                     </div>
-                    <div class="flex justify-items-end">
+                    <div class="flex justify-items-end cursor-pointer hover:text-blue-600">
                         <h1 class="text-md font-extrabold tracking-tight w-full py-2 bg-white">Lihat semua Jasa</h1>
                     </div>
                 </div>
@@ -331,12 +333,36 @@
                     </div>
                 </div>
             </div>
+            <div class="flex mt-10">
+                <div class="w-[473px] h-[584px] bg-orange-400 p-12 text-white mr-6 rounded-xl flex flex-col justify-end">
+                    <h1 class="font-bold text-4xl text-white">Semua hanya di JasaKu</h1>
+                    <p>Lebih dari 200 kategori jasa yang kami tawarkan</p>
+                    <button class="bg-white text-green-500 rounded-lg py-2 px-4 mt-4 font-bold w-fit">Daftar Gratis</button>
+                </div>
+                <div class="w-[664px] h-[584px] bg-green-100 p-12 text-black rounded-xl">
+                    <div class="">
+                        <h1 class="font-semibold text-4xl text-">Menyelesaikan pekerjaan mudah bersama JasaKu</h1>
+                    </div>
+                    <div class="mt-8">
+                        <h1 class="font-semibold text-lg">Tidak ada biaya sampai Anda menyewa</h1>
+                        <p class="text-gray-500">Wawancarai calon yang cocok untuk pekerjaan Anda, negosiasikan tarif, dan hanya bayar untuk pekerjaan yang Anda setujui.</p>
+                    </div>
+                    <div class="mt-4">
+                        <h1 class="font-semibold text-lg">Aman dan nyaman</h1>
+                        <p class="text-gray-500">Fokus pada pekerjaan Anda karena kami tahu kami membantu melindungi data dan privasi Anda. Kami di sini dengan dukungan 24/7 jika Anda membutuhkannya.</p>
+                    </div>
+                    <div class="mt-4">
+                        <h1 class="font-semibold text-lg">Bukti kualitas</h1>
+                        <p class="text-gray-500">Periksa sampel pekerjaan profesional, ulasan klien, dan verifikasi identitas.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     
         <div class="p-8">
             <p class="text-center text-gray-600">scroll tol!</p>
-            <div class="h-screen bg-white"></div>
-            <div class="h-screen bg-white"></div>
+            <div class="h-screen bg-gray-200"></div>
+            <div class="h-screen bg-gray-200"></div>
         </div>
 
         <script type="text/javascript">
