@@ -217,10 +217,8 @@
 
         {{-- the tolerant line of limit --}}
         <div class="flex flex-col items-center min-h-screen mt-[160px]">
-            {{-- REMOVE IT LATER FOR MARGIN TOP --}}
-            <div class="w-full h-6"></div> 
             {{-- # carousel image banner --}}
-            <div class="promo-banner w-[1208px] h-[302px]">
+            <div class="promo-banner w-[1208px] h-[302px] mt-6">
 
                 <div class="container mx-auto">
                     <div class="carousel relative">
@@ -258,10 +256,9 @@
                     </div>
                 </div>
             </div>
-            {{-- REMOVE IT LATER FOR MARGIN TOP --}}
-            <div class="w-full h-6"></div>
-            {{-- # all list category --}}
-            <div class="list-category w-[1208px] h-[312px] rounded-xl py-4 flex flex-col justify-start items-start">
+
+            {{-- FEATURE LIST CATEGORY --}}
+            <div class="list-category w-[1208px] h-[312px] rounded-xl py-4 flex flex-col justify-start items-start mt-6">
                 <div class="flex flex-row justify-between items-center w-full">
                     <div class="flex justify-items-start">
                         <h1 class="text-2xl font-extrabold tracking-tight w-full py-2 bg-white">Kategori Pilihan</h1>
@@ -270,6 +267,7 @@
                         <h1 class="text-md font-extrabold tracking-tight w-full py-2 bg-white">Lihat semua Jasa</h1>
                     </div>
                 </div>
+                {{-- # all list category --}}
                 <div class="w-fit h-full py-2">
                     <div class="grid grid-cols-4 grid-rows-2 gap-x-4 gap-y-4">
                         <!-- Example categories (replace with your actual categories) -->
@@ -360,7 +358,31 @@
                 </div>
             </div>
 
-            <div class=""></div>
+            {{-- FEATURE DETAIL STEPS ORDER --}}
+            <div class="flex mt-10">
+                <div class="w-[473px] h-[584px] bg-orange-400 p-12 text-white mr-6 rounded-xl flex flex-col justify-end">
+                    <h1 class="font-bold text-4xl text-white">Semua hanya di JasaKu</h1>
+                    <p>Lebih dari 200 kategori jasa yang kami tawarkan</p>
+                    <button class="bg-white text-green-500 rounded-lg py-2 px-4 mt-4 font-bold w-fit">Daftar Gratis</button>
+                </div>
+                <div class="w-[664px] h-[584px] bg-green-100 p-12 text-black rounded-xl">
+                    <div class="">
+                        <h1 class="font-semibold text-4xl text-">Menyelesaikan pekerjaan mudah bersama JasaKu</h1>
+                    </div>
+                    <div class="mt-8">
+                        <h1 class="font-semibold text-lg">Tidak ada biaya sampai Anda menyewa</h1>
+                        <p class="text-gray-500">Wawancarai calon yang cocok untuk pekerjaan Anda, negosiasikan tarif, dan hanya bayar untuk pekerjaan yang Anda setujui.</p>
+                    </div>
+                    <div class="mt-4">
+                        <h1 class="font-semibold text-lg">Aman dan nyaman</h1>
+                        <p class="text-gray-500">Fokus pada pekerjaan Anda karena kami tahu kami membantu melindungi data dan privasi Anda. Kami di sini dengan dukungan 24/7 jika Anda membutuhkannya.</p>
+                    </div>
+                    <div class="mt-4">
+                        <h1 class="font-semibold text-lg">Bukti kualitas</h1>
+                        <p class="text-gray-500">Periksa sampel pekerjaan profesional, ulasan klien, dan verifikasi identitas.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     
         <div class="p-8">
