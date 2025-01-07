@@ -360,27 +360,41 @@
             </div>
 
             {{-- FEATURE DETAIL STEPS ORDER --}}
-            <div class="flex mt-10">
-                <div class="w-[473px] h-[584px] bg-orange-400 p-12 text-white mr-6 rounded-xl flex flex-col justify-end">
-                    <h1 class="font-bold text-4xl text-white">Semua hanya di JasaKu</h1>
-                    <p>Lebih dari 200 kategori jasa yang kami tawarkan</p>
-                    <button class="bg-white text-green-500 rounded-lg py-2 px-4 mt-4 font-bold w-fit">Daftar Gratis</button>
+            <div class="flex mt-10 bg-red-200 w-[1208px] h-[584px] justify-between">
+                <div class="bg-yellow-200 w-[55%] flex flex-col">
+                    <div class="bg-green-300 flex flex-row justify-between h-full">
+                        <div class="bg-yellow-200 w-full flex justify-center items-center flex-col gap-3">
+                            <h1 class="font-semibold text-xl">1. Isi kebutuhan</h1>
+                            <p class="px-10 text-center text-lg">Informasikan kepada kami kebutuhan Anda dengan menjawab beberapa pertanyaan</p>
+                        </div>
+                        <div class="bg-green-200 w-full flex justify-center items-center flex-col gap-3">
+                            <h1 class="font-semibold text-xl">2. Tunggu beberapa saat</h1>
+                            <p class="px-10 text-center text-lg">Dapatkan sampai dengan enam penawaran dari penyedia jasa yang sesuai dengan kebutuhan Anda</p>
+                        </div>
+                    </div>
+                    <div class="bg-blue-200 h-full flex justify-center items-center flex-col gap-3">
+                        <h1 class="font-semibold text-xl">3. Pilih yang terbaik</h1>
+                        <p class="px-16 text-center text-lg">Bandingkan penawaran dan profil usaha penyedia jasa lalu hubungi penyedia jasa yang Anda inginkan</p>
+                    </div>
                 </div>
-                <div class="w-[664px] h-[584px] bg-green-100 p-12 text-black rounded-xl">
-                    <div class="">
-                        <h1 class="font-semibold text-4xl text-">Menyelesaikan pekerjaan mudah bersama JasaKu</h1>
-                    </div>
-                    <div class="mt-8">
-                        <h1 class="font-semibold text-lg">Tidak ada biaya sampai Anda menyewa</h1>
-                        <p class="text-gray-500">Wawancarai calon yang cocok untuk pekerjaan Anda, negosiasikan tarif, dan hanya bayar untuk pekerjaan yang Anda setujui.</p>
-                    </div>
-                    <div class="mt-4">
-                        <h1 class="font-semibold text-lg">Aman dan nyaman</h1>
-                        <p class="text-gray-500">Fokus pada pekerjaan Anda karena kami tahu kami membantu melindungi data dan privasi Anda. Kami di sini dengan dukungan 24/7 jika Anda membutuhkannya.</p>
-                    </div>
-                    <div class="mt-4">
-                        <h1 class="font-semibold text-lg">Bukti kualitas</h1>
-                        <p class="text-gray-500">Periksa sampel pekerjaan profesional, ulasan klien, dan verifikasi identitas.</p>
+                <div class="bg-gray-200 w-[45%] flex justify-start items-start flex-col gap-6 px-8 py-10">
+                    <h1 class="font-semibold text-2xl px-4">Lebih dari 300,000 customer telah menggunakan Sejasa.com untuk menemukan Penyedia Jasa Terpercaya</h1>
+                    <ul class="flex flex-col gap-1 px-4">
+                        <li class="flex flex-row gap-4">
+                            <i class="bi bi-check-lg text-green-400 text-2xl"></i>
+                            <h1 class="font-semibold text-base">Respon langsung dari Mitra Penyedia Jasa Kami</h1>
+                        </li>
+                        <li class="flex flex-row gap-4">
+                            <i class="bi bi-check-lg text-green-400 text-2xl"></i>
+                            <h1 class="font-semibold text-base">Bantuan pengecekan pekerjaan & progress pembayaran</h1>
+                        </li>
+                        <li class="flex flex-row gap-4">
+                            <i class="bi bi-check-lg text-green-400 text-2xl"></i>
+                            <h1 class="font-semibold text-base">Asuransi untuk keamanan projek Anda</h1>
+                        </li>
+                    </ul>
+                    <div class="flex w-fit px-6">
+                        <button class="bg-orange-400 text-white rounded-md py-5 px-6 font-bold w-fit uppercase text-sm">Pesan Jasa</button>
                     </div>
                 </div>
             </div>
