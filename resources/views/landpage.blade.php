@@ -400,38 +400,44 @@
             </div>
 
             {{-- FEATURE TESTIMONY ORDER --}}
-            <div class="flex flex-col py-20 w-full">
-                <h1 class="text-4xl font-bold text-center mb-4">Yang Mereka Katakan!</h1>
-                <p class="text-center mb-16 text-[#777777]">Mendapatkan pelayanan, di mana pun, kapan pun, dan kapan pun Anda butuhkan.</p>
-                <div class="flex justify-center px-20">
-                    <div class="px-4 mb-8">
-                        <div class="bg-red-50 p-6 rounded-xl flex items-start w-[622px] h-[215px]">
-                            <img src="/images/user1.jpg" class="h-10 w-10 rounded-full mr-6">
-                            <div>
-                                <p class="mb-3 text-[#777777]">Pekerjaan rapih banget, tukang dan mandornya juga ramah banget. Terus enak juga minta pendapat / saran ke mereka, untuk masalah harga sesuai kualitas kerja dan juga bisa nego. Pokoknya mantap Mas Tukang.</p>
-                                <h1 class="font-black text-xl mb-2">Anselma Kanih</h1>
-                                <div class="flex">
-                                    <i class="bi bi-star-fill text-red-500"></i>
-                                    <i class="bi bi-star-fill text-red-500"></i>
-                                    <i class="bi bi-star-fill text-red-500"></i>
-                                    <i class="bi bi-star-fill text-red-500"></i>
-                                    <i class="bi bi-star-half text-red-500"></i>
+            <div class="flex flex-col border rounded-2xl m-14 w-[1523px] h-[584px] relative overflow-hidden">
+                <img src="{{ asset('images/ads.png') }}" class="absolute w-full h-full object-cover blur-sm pt-4">
+                <div class="relative z-10 flex justify-center items-center flex-col">
+                    <h1 class="text-4xl font-bold text-center mt-14 mb-4">Yang Mereka Katakan!</h1>
+                    <p class="text-center mb-16 text-[#777777]">Mendapatkan pelayanan, di mana pun, kapan pun, dan kapan pun Anda butuhkan.</p>
+                    <div class="flex flex-col justify-center px-10">
+                        <div class="flex flex-row justify-center items-center">
+
+                            <div class="px-4 mb-8 hover:scale-105 hover:drop-shadow-xl cursor-pointer">
+                                <div class="bg-red-50 p-6 rounded-xl flex items-start w-[622px] h-[215px]">
+                                    <img src="/images/user1.jpg" class="h-10 w-10 rounded-full mr-6">
+                                    <div>
+                                        <p class="mb-3 text-[#777777]">Pekerjaan rapih banget, tukang dan mandornya juga ramah banget. Terus enak juga minta pendapat / saran ke mereka, untuk masalah harga sesuai kualitas kerja dan juga bisa nego. Pokoknya mantap Mas Tukang.</p>
+                                        <h1 class="font-black text-xl mb-2">Anselma Kanih</h1>
+                                        <div class="flex">
+                                            <i class="bi bi-star-fill text-red-500"></i>
+                                            <i class="bi bi-star-fill text-red-500"></i>
+                                            <i class="bi bi-star-fill text-red-500"></i>
+                                            <i class="bi bi-star-fill text-red-500"></i>
+                                            <i class="bi bi-star-half text-red-500"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="px-4 mb-8">
-                        <div class="bg-red-50 p-6 rounded-xl flex items-start w-[622px] h-[215px]">
-                            <img src="/images/user2.jpg" class="h-10 w-10 rounded-full mr-6">
-                            <div>
-                                <p class="mb-3 text-[#777777]">AP Arsitektur, sangat brillian dalam mengembangkan ide dan memberikan solusi dalam merenovasi rumah yang di sesuaikan dengan keterbatsan dana. saya sangat merekomendasikan kepada siapapun untuk menggunakan jasa AP Arsitektur</p>
-                                <h1 class="font-black text-xl mb-2">Abraham Gingsul</h1>
-                                <div class="flex">
-                                    <i class="bi bi-star-fill text-red-500"></i>
-                                    <i class="bi bi-star-fill text-red-500"></i>
-                                    <i class="bi bi-star-fill text-red-500"></i>
-                                    <i class="bi bi-star-fill text-red-500"></i>
-                                    <i class="bi bi-star text-red-500"></i>
+                            <div class="px-4 mb-8 hover:scale-105 hover:drop-shadow-xl cursor-pointer">
+                                <div class="bg-red-50 p-6 rounded-xl flex items-start w-[622px] h-[215px]">
+                                    <img src="/images/user2.jpg" class="h-10 w-10 rounded-full mr-6">
+                                    <div>
+                                        <p class="mb-3 text-[#777777]">AP Arsitektur, sangat brillian dalam mengembangkan ide dan memberikan solusi dalam merenovasi rumah yang di sesuaikan dengan keterbatsan dana. saya sangat merekomendasikan kepada siapapun untuk menggunakan jasa AP Arsitektur</p>
+                                        <h1 class="font-black text-xl mb-2">Abraham Gingsul</h1>
+                                        <div class="flex">
+                                            <i class="bi bi-star-fill text-red-500"></i>
+                                            <i class="bi bi-star-fill text-red-500"></i>
+                                            <i class="bi bi-star-fill text-red-500"></i>
+                                            <i class="bi bi-star-fill text-red-500"></i>
+                                            <i class="bi bi-star text-red-500"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
