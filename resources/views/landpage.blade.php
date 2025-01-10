@@ -402,7 +402,7 @@
             {{-- FEATURE TESTIMONY ORDER --}}
             <div class="flex flex-col py-20 w-full">
                 <h1 class="text-4xl font-bold text-center mb-4">Yang Mereka Katakan!</h1>
-                <p class="text-center mb-16 text-[#777777]">Siap melayani, di mana pun, kapan pun, dan kapan pun Anda butuhkan.</p>
+                <p class="text-center mb-16 text-[#777777]">Mendapatkan pelayanan, di mana pun, kapan pun, dan kapan pun Anda butuhkan.</p>
                 <div class="flex justify-center px-20">
                     <div class="px-4 mb-8">
                         <div class="bg-red-50 p-6 rounded-xl flex items-start w-[622px] h-[215px]">
