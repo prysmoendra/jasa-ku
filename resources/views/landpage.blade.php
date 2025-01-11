@@ -444,6 +444,20 @@
                     </div>
                 </div>
             </div>
+
+            {{-- FEATURE JOIN SERVICE PROVIDER --}}
+            <div class="bg-white h-fit flex items-center justify-center mt-16">
+                <div class="bg-gradient-to-r from-green-500 to-blue-500 py-10 rounded-lg shadow-md border flex justify-center items-center overflow-visible">
+                    <div class="w-[40%] relative -m-28 overflow-visible">
+                        <img src="{{ asset('images/join-provider.png') }}" alt="Example Image" class="ml-4 mb-[72px]">
+                    </div>
+                    <div class="w-[60%] pl-10">
+                        <h1 class="text-5xl font-extrabold mb-4 text-white">Menjadi Penyedia Jasa</h1>
+                        <p class="mb-6 text-xl text-white">Kami akan menghubungkan Anda dengan customer sehingga Anda dapat meningkatkan kinerja bisnis Anda.</p>
+                        <button class="bg-orange-500 text-white rounded-lg py-3 px-4 mt-4 text-lg font-bold w-fit">Daftar Sekarang</button>
+                    </div>
+                </div>
+            </div>
         </div>
     
         <div class="p-8">
