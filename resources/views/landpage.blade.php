@@ -101,6 +101,9 @@
                 right: -20px;
                 top: 150px;
             }
+            .cont-box-2{
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/bg-contactus.jpg') }}');
+            }
         </style>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -378,7 +381,7 @@
                     </div>
                 </div>
                 <div class="bg-gray-200 w-[45%] flex justify-start items-start flex-col gap-6 px-8 py-10">
-                    <h1 class="font-semibold text-2xl px-4">Lebih dari 300,000 customer telah menggunakan Sejasa.com untuk menemukan Penyedia Jasa Terpercaya</h1>
+                    <h1 class="font-semibold text-2xl px-4">Lebih dari 300,000 customer telah menggunakan JasaKu.com untuk menemukan Penyedia Jasa Terpercaya</h1>
                     <ul class="flex flex-col gap-1 px-4">
                         <li class="flex flex-row gap-4">
                             <i class="bi bi-check-lg text-green-400 text-2xl"></i>
@@ -458,12 +461,48 @@
                     </div>
                 </div>
             </div>
-        </div>
-    
-        <div class="p-8">
-            <p class="text-center text-gray-600">scroll tol!</p>
-            <div class="h-screen bg-gray-200"></div>
-            <div class="h-screen bg-gray-200"></div>
+
+            {{-- FEATURE SERVICE PROVIDER VOICE --}}
+            <div class="w-full h-screen mt-24 relative">
+                <h1 class="text-4xl font-bold text-center mt-4 mb-4">Yang Pelanggan Kami Katakan!</h1>
+                <p class="text-center mb-2 text-[#777777]">Mendapatkan pelayanan, di mana pun, kapan pun, dan kapan pun Anda butuhkan.</p>
+                <div class="cont-box-1 bg-white w-full h-[40%] relative">
+                    <div class="bg-white w-[1024px] h-[482px] absolute left-1/2 transform -translate-x-1/2 top-[22%] -mt-8 flex flex-row items-center justify-center text-white text-lg font-bold rounded-lg shadow-xl">
+                        <div class="w-full h-full flex flex-col justify-between gap-6 items-center p-16 hover:border hover:rounded-lg cursor-pointer">
+                            <div class="flex w-full h-[70%] justify-center">
+                                <p class="mb-3 text-lg tracking-wide text-justify text-[#777777]">"Saya nggak perlu menghabiskan banyak waktu dan tenaga untuk bertemu dan deal dengan customer secara langsung setelah menggunakan JasaKu. Rezeki dari customer baru yang saya dapat juga banyak karena JasaKu sudah terkenal sebagai penyedia jasa online yang terpercaya."</p>
+                            </div>
+                            <div class="flex flex-row justify-start items-center w-full h-[30%]">
+                                <img src="/images/jasa-AP.png" class="h-14 w-14 rounded-full mr-6 border">
+                                <div class="flex flex-col">
+                                    <h1 class="font-black text-black text-lg">AP Architecture Studio</h1>
+                                    <p class="text-[#777777] text-sm tracking-wide">Kontraktor Bangunan</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-full flex flex-col justify-between gap-6 items-center p-16 hover:border hover:rounded-lg cursor-pointer">
+                            <div class="flex w-full h-[70%] justify-center">
+                                <p class="mb-3 text-lg tracking-wide text-justify text-[#777777]">"Selama 6 bulan menggunakan JasaKu, saya sangat amat terbantu. Bukan hanya menambah pelanggan baru, kegiatan usaha saya semakin padat berkat proyek dari jasaku.com. Pokoknya makin sibuk karena limpahan proyek baru! JasaKu benar-benar mengubah cara saya menjalankan usaha."</p>
+                            </div>
+                            <div class="flex flex-row justify-start items-center w-full h-[30%]">
+                                <img src="/images/jasa-SG.png" class="h-14 w-14 rounded-full mr-6 border">
+                                <div class="flex flex-col">
+                                    <h1 class="font-black text-black text-lg">Sumber Gemilang</h1>
+                                    <p class="text-[#777777] text-sm tracking-wide">Kontraktor Bangunan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-box-2 bg-cover bg-center bg-black w-full h-[60%] flex flex-col justify-end items-center">
+                    <h1 class="text-white mb-4 text-center font-semibold tracking-wide text-4xl">Ada Yang Perlu Ditanyakan,</h1>
+                    <h1 class="text-white mb-10 text-center font-semibold tracking-wide text-4xl">Hubungi Kami!</h1>
+                    <div class="mb-32">
+                        <a href="" class="inline-block text-white border border-white py-4 px-8 text-sm font-bold bg-transparent relative cursor-pointer hover:border-red-600 hover:bg-red-600 transition duration-1000">CONTACT US</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <script type="text/javascript">
