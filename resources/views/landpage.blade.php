@@ -503,6 +503,30 @@
                 </div>
             </div>
 
+            {{-- FOOTER --}}
+            <section class="footer w-full text-center pt-8 mt-36">
+                <hr>
+                <h4 class="mb-8 mt-5 font-bold">About Us</h4>
+                <p class="text-[#777777] tracking-wide text-base">
+                    Hubungi kami untuk informasi teknis seputar proses dan pelaksanaan Layanan yang disediakan ole JasaKu di menu Contact,<br>
+                    Atau pilih menu About untuk membaca Tata Cara dalam menggunakan Layanan JasaKu.
+                </p>
+                <div class="icons flex justify-center space-x-6 py-6">
+                    <a href="#" class="text-red-600 cursor-pointer"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-red-600 cursor-pointer"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-red-600 cursor-pointer"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-red-600 cursor-pointer"><i class="bi bi-youtube"></i></a>
+                </div>
+                <p class="text-[#777777] text-base">Made With by | <b class="text-red-600 font-extrabold">Dakode</b></p>
+                <hr class="mt-3">
+                <div class="flex flex-row justify-between items-center w-full h-12 px-36">
+                    <p class="text-red-600 font-extrabold">JasaKu | <b class="text-[#777777] font-extralight text-base">Copyright © 2025 PT. Dakotech Services Technology</b></p>
+                    <div class="flex flex-row gap-8">
+                        <p class="text-[#777777] text-base hover:text-gray-600 cursor-pointer">Kebijakan Privasi</p>
+                        <p class="text-[#777777] text-base hover:text-gray-600 cursor-pointer">Syarat dan Ketentuan</p>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <script type="text/javascript">
