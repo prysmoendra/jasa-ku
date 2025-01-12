@@ -403,7 +403,7 @@
             <div class="flex flex-col border rounded-2xl m-14 w-[1523px] h-[584px] relative overflow-hidden">
                 <img src="{{ asset('images/ads.png') }}" class="absolute w-full h-full object-cover blur-sm pt-4">
                 <div class="relative z-10 flex justify-center items-center flex-col">
-                    <h1 class="text-4xl font-bold text-center mt-14 mb-4">Yang Mereka Katakan!</h1>
+                    <h1 class="text-4xl font-bold text-center mt-14 mb-4">Yang Pelanggan Kami Katakan!</h1>
                     <p class="text-center mb-16 text-[#777777]">Mendapatkan pelayanan, di mana pun, kapan pun, dan kapan pun Anda butuhkan.</p>
                     <div class="flex flex-col justify-center px-10">
                         <div class="flex flex-row justify-center items-center">
