@@ -229,9 +229,9 @@
                         <div class="carousel-inner relative w-full">
                             @php
                             $images = [
-                                asset('images/banner-1.jpg'),
-                                asset('images/banner-2.jpg'),
-                                asset('images/banner-3.jpg')
+                                asset('images/banner-1.png'),
+                                asset('images/banner-2.png'),
+                                asset('images/banner-3.png')
                             ];
                             @endphp
 
