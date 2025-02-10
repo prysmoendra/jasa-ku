@@ -6,8 +6,8 @@
 
 @section('top-content')
     @if (session('success'))
-        <script type="text/javascript">
-            alert("{{ session('success') }}");
+        <script>
+            console.log("{{ session('success') }}");
         </script>
     @endif
 
@@ -113,6 +113,7 @@
         </div>
     </section>
 
+    {{-- FORM SCRIPT --}}
     <script>
         function showForm(formType) {
             document.getElementById('login-container').style.display = 'none';
