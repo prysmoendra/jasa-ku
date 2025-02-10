@@ -15,6 +15,10 @@ class LoginController extends Controller
         return 'phone_number';
     }
 
+    public function landpage(){
+        return view('homes.landpage');
+    }
+
     // Handle password submission and login
     public function login(Request $request)
     {
@@ -42,7 +46,7 @@ class LoginController extends Controller
                 session()->put('customer', $customer);
 
                 // Authentication passed
-                return redirect()->route('home')->with('success', 'Selamat datang, ' . $customer->customer_name . '!');
+                return redirect()->route('beranda')->with('success', 'Selamat datang, ' . $customer->customer_name . '!');
             }
 
         } else {

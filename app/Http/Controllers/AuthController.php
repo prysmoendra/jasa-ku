@@ -13,11 +13,33 @@ class AuthController extends Controller
     {
         // Validate input
         $request->validate([
-            'phone' => 'required|string',
+            'phone' => [
+                'required',
+                'string',
+                'regex:/^(08|628|8)\d+$/',
+                'min:10',
+                'max:15'
+            ]
         ]);
 
         // Get the phone number from the request
-        $phone = $request->input('phone');
+        // $phone = $request->input('phone');
+        $phone = preg_replace('/\D/', '', $request->phone);
+    
+        // Normalize phone number
+        if(str_starts_with($phone, '0')) {
+            $phone = '62' . substr($phone, 1);
+        } elseif(str_starts_with($phone, '8')) {
+            $phone = '62' . $phone;
+        }
+
+        // if (str_starts_with($phone, '08')) {
+        //     $phone = '628' . substr($phone, 2);
+        // }
+
+        // Ensure numeric format
+        // $phone = preg_replace('/\D/', '', $phone);
+
         // Store the phone number in the session (optional)
         $request->session()->put('phone', $phone);
 
