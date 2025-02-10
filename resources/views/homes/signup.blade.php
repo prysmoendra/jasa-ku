@@ -1,10 +1,12 @@
 @if ($errors->any())
-    <div class="bg-red-500 text-white p-4 rounded mb-4">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
+    <div class="flex justify-center items-center mt-1">
+        <div class="bg-red-500 text-white font-bold text-sm rounded p-2 w-[85%] h-full">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
     </div>
 @endif
 
@@ -59,22 +61,28 @@
                 <label for="phone" class="block text-sm font-medium text-gray-700">Nomor telepon</label>
                 <div class="flex mt-1 w-full">
                     <span class="justify-center inline-flex items-center px-2 text-lg border border-gray-300 bg-gray-100 rounded-l-lg w-[12%] font-medium">+62</span>
-                    <input type="tel" id="phone" name="phone" class="w-[88%] border border-gray-300 rounded-r-lg focus:border-black focus:ring-0 focus:ring-black focus:outline-none px-4 py-[10px] text-lg">
+                    <input type="tel" id="ex_phone_signup" name="ex_phone_signup" value="{{ old('ex-phone_signup') }}" class="w-[88%] border border-gray-300 rounded-r-lg focus:border-black focus:ring-0 focus:ring-black focus:outline-none px-4 py-[10px] text-lg" oninput="formatPhoneNumberSignUp(this)">
+                    <input type="hidden" id="phone_signup" name="phone_signup">
                 </div>
+
+                {{-- error message --}}
+                @error('phone_number')
+                    <span class="text-red-500 text-xs mt-1">{{ $message }}</span>
+                @enderror
             </div>
         </div>
 
         <!-- Password -->
         <div class="relative flex flex-col gap-[6px]">
             <label for="password" class="block text-sm font-medium text-gray-700">Kata Sandi</label>
-            <input type="password" name="password" id="password" class="mt-1 block w-full border border-gray-300 rounded-lg focus:border-black focus:ring-0 focus:ring-black focus:outline-none px-4 py-[10px] text-lg pr-10">
-            <i class="bi bi-eye-slash absolute top-[35px] px-2 py-[6px] right-4 cursor-pointer text-xl text-gray-500" id="togglePassword"></i>
+            <input type="password" name="password" id="l_password" class="mt-1 block w-full border border-gray-300 rounded-lg focus:border-black focus:ring-0 focus:ring-black focus:outline-none px-4 py-[10px] text-lg pr-10">
+            <i class="bi bi-eye-slash absolute top-[35px] px-2 py-[6px] right-4 cursor-pointer text-xl text-gray-500" id="l_togglePassword"></i>
         </div>
         <!-- Confirm Password -->
         <div class="relative flex flex-col gap-[6px]">
             <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Konfirmasi Kata Sandi</label>
-            <input type="password" name="password_confirmation" id="password_confirmation" class="mt-1 block w-full border border-gray-300 rounded-lg focus:border-black focus:ring-0 focus:ring-black focus:outline-none px-4 py-[10px] text-lg pr-10">
-            <i class="bi bi-eye-slash absolute top-[35px] px-2 py-[6px] right-4 cursor-pointer text-xl text-gray-500" id="toggleConfirmPassword"></i>
+            <input type="password" name="password_confirmation" id="s_password_confirmation" class="mt-1 block w-full border border-gray-300 rounded-lg focus:border-black focus:ring-0 focus:ring-black focus:outline-none px-4 py-[10px] text-lg pr-10">
+            <i class="bi bi-eye-slash absolute top-[35px] px-2 py-[6px] right-4 cursor-pointer text-xl text-gray-500" id="s_toggleConfirmPassword"></i>
         </div>
 
         <hr>
@@ -89,3 +97,54 @@
         <button type="button" id="cancel-button" class="mr-2 px-4 py-2 bg-gray-300 rounded-md hover:bg-gray-400 hidden">Cancel</button>
     </div>
 </form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            var togglePassword = document.getElementById('l_togglePassword');
+            var passwordInput = document.getElementById('l_password');
+            var toggleConfirmPassword = document.getElementById('s_toggleConfirmPassword');
+            var confirmPasswordInput = document.getElementById('s_password_confirmation');
+
+            togglePassword.addEventListener('click', function() {
+                // Toggle the type attribute
+                var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+
+                // Toggle the icon
+                this.classList.toggle('bi-eye');
+                this.classList.toggle('bi-eye-slash');
+            });
+
+            toggleConfirmPassword.addEventListener('click', function() {
+                // Toggle the type attribute
+                var type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                confirmPasswordInput.setAttribute('type', type);
+
+                // Toggle the icon
+                this.classList.toggle('bi-eye');
+                this.classList.toggle('bi-eye-slash');
+            });
+    });
+
+
+    // validation phone number
+    function formatPhoneNumberSignUp(input) {
+        // Remove all non-digit characters
+        let value = input.value.replace(/\D/g, '');
+        
+        // Auto-replace "08" with "628"
+        if (value.startsWith('08')) {
+            value = '8' + value.substring(2);
+        }
+        if (value.startsWith('628')) {
+            value = '8' + value.substring(3);
+        }
+        
+        // Update the input value
+        input.value = value;
+
+        // Store the full value (with country code) in a hidden field
+        const fullPhoneNumber = '62' + value;
+        document.getElementById('phone_signup').value = fullPhoneNumber;
+    }
+</script>
