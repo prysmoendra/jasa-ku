@@ -13,7 +13,8 @@
                 <label for="phone" class="block text-sm font-medium text-gray-700">Nomor telepon</label>
                 <div class="flex mt-1 w-full">
                     <span class="justify-center inline-flex items-center px-2 text-lg border border-gray-300 bg-gray-100 rounded-l-lg w-[12%] font-medium">+62</span>
-                    <input type="tel" id="phone" name="phone" class="w-[88%] border border-gray-300 rounded-r-lg focus:border-black focus:ring-0 focus:ring-black focus:outline-none px-4 py-[10px] text-lg">
+                    <input type="tel" id="ex_phone" name="ex_phone" class="w-[88%] border border-gray-300 rounded-r-lg focus:border-black focus:ring-0 focus:ring-black focus:outline-none px-4 py-[10px] text-lg" oninput="formatPhoneNumber(this)">
+                    <input type="hidden" id="phone" name="phone">
                 </div>
             </div>
         </div>
@@ -74,3 +75,24 @@
         </div>
     </div>
 </form>
+
+<script>
+    function formatPhoneNumber(input) {
+        // Remove all non-digit characters
+        let value = input.value.replace(/\D/g, '');
+        
+        // Auto-replace "08" with "628"
+        if (value.startsWith('08')) {
+            value = '8' + value.substring(2);
+        }
+        if (value.startsWith('628')) {
+            value = '8' + value.substring(3);
+        }
+        
+        // Update the input value
+        input.value = value;
+
+        const fullPhoneNumber = '62' + value;
+        document.getElementById('phone').value = fullPhoneNumber;
+    }
+</script>
