@@ -49,12 +49,12 @@ class AuthController extends Controller
         // Phone number exists, redirect to password input
         if ($customer) {
             // Redirect to the same page to show password modal
-            return redirect()->route('home', ['formType' => 'password', 'phone' => $phone]);
+            return redirect()->route('login', ['formType' => 'password', 'phone' => $phone]);
 
         // Phone number doesn't exist, redirect to sign-up form
         } else {
             // Redirect to the sign-up modal
-            return redirect()->route('home', ['formType' => 'signup']);
+            return redirect()->route('login', ['formType' => 'signup']);
         }
     }
 }
