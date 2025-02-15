@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## jasa-ku | Laravel
+## Dakode | Babantu
 
 <img width="1620" alt="page-signin" src="https://github.com/user-attachments/assets/17caf5c6-ddaa-4100-a38e-49cff1b29d28" />
 <img width="1680" alt="landpage-login" src="https://github.com/user-attachments/assets/226c8307-ef38-483e-99e9-ce53f21c21a3" />
