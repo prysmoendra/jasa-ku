@@ -24,6 +24,8 @@
         </style>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        {{-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> --}}
     </head>
     <body class="font-sans antialiased">
         {{-- HEADER --}}
@@ -34,20 +36,28 @@
                 <div class="fixed top-0 left-0 right-0 z-20 border-b-2 bg-white">
     
                     <div class="flex justify-between items-center h-20 pl-20 pr-20">
-                    {{-- logo Babantu --}}
+                        {{-- logo Babantu --}}
                     <div class="font-extrabold underline decoration-pink-500 text-xl flex justify-start items-center w-[30%]">
-                        <a href="{{ url('/') }}">
+                        <a href="{{ url('/beranda') }}">
                             <img src="{{ asset('images/svg-nama-logo.png') }}" alt="babantu" class="w-32 h-16">
                         </a>
                     </div>
 
                         {{-- field pencarian --}}
-                        <div id="search-bar" class="flex justify-center items-center justify-items-center w-full drop-shadow-md">
-                            <input type="text" placeholder="Cari penyedia jasa di Babantu" class="w-full px-6 py-3 border border-gray-300 rounded-full shadow-sm">
-                        </div>
+                        @yield('map-search')
 
                         {{-- right side menu --}}
                         <div class="flex flex-row justify-end justify-items-end items-center space-x-1 w-[30%]">
+                            {{-- add new Location --}}
+                            {{-- <a href="{{ url('/add-new') }}">
+                                <button class="text-sm font-bold w-[116px] h-[48px] bg-gray-100 flex flex-row justify-center justify-items-center items-center space-x-2 border rounded-full cursor-pointer hover:drop-shadow-md hover:text-gray-700">
+                                    <i class="bi bi-plus-lg"></i>
+                                    <p class="font-extrabold">
+                                        Location
+                                    </p>
+                                </button>
+                            </a> --}}
+
                             {{-- bahasa Babantu --}}
                             <div class="relative">
                                 <div id="language-menu" class="w-[46px] h-[42px] flex justify-center justify-items-center items-center hover:bg-gray-100 hover:rounded-full cursor-pointer">
@@ -83,175 +93,37 @@
             </div>
         </section>
 
-        <section class="main-content w-full flex justify-center items-center pt-24 bg-gray-50 relative">
-            <div class="flex flex-row justify-between items-start w-4/5 h-fit gap-2 relative">
-                {{-- column filter --}}
-                <div class="w-[25%] h-fit bg-white border rounded-lg p-6">
-                    <h1 class="text-xl font-bold">Filter</h1>
-                
-                    <!-- lokasi dropdown filter -->
-                    <div class="relative inline-block text-left mt-3 w-full" x-data="{ open: false }">
-                        <div class="flex flex-row justify-between w-full">
-                        <button @click="open = !open" type="button" class="inline-flex justify-between w-full h-fit px-6 py-2 text-lg font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50">
-                            <p class="mr-8">Lokasi</p>
-                            <i class="bi bi-chevron-down"></i>
-                        </button>
-                        </div>
-                        <div x-show="open" class="relative mt-2 w-full bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none" style="display: none;">
-                        <div class="py-1">
-                            <div class="px-4 py-2 text-sm text-gray-700">
-                            <label class="inline-flex items-center">
-                                <input type="checkbox" class="form-checkbox" value="Depok">
-                                <span class="ml-2">Depok</span>
-                            </label>
-                            </div>
-                            <div class="px-4 py-2 text-sm text-gray-700">
-                            <label class="inline-flex items-center">
-                                <input type="checkbox" class="form-checkbox" value="Tangerang">
-                                <span class="ml-2">Tangerang</span>
-                            </label>
-                            </div>
-                            <!-- Add more checkboxes here -->
-                            <div class="px-4 py-2 text-sm text-gray-700">
-                            <label class="inline-flex items-center">
-                                <input type="checkbox" class="form-checkbox" value="Bekasi">
-                                <span class="ml-2">Bekasi</span>
-                            </label>
-                            </div>
-                            <div class="px-4 py-2 text-sm text-gray-700">
-                            <label class="inline-flex items-center">
-                                <input type="checkbox" class="form-checkbox" value="Jakarta">
-                                <span class="ml-2">Jakarta</span>
-                            </label>
-                            </div>
-                            <div class="px-4 py-2 text-sm text-gray-700">
-                            <label class="inline-flex items-center">
-                                <input type="checkbox" class="form-checkbox" value="Bogor">
-                                <span class="ml-2">Bogor</span>
-                            </label>
-                            </div>
-                        </div>
-                        <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Lihat selengkapnya</a>
-                        </div>
-                        </div>
-                    </div>
-                
-                    <!-- harga dropdown filter -->
-                    <div class="relative inline-block text-left mt-3 w-full" x-data="{ open: false }">
-                        <div class="flex flex-row justify-between w-full">
-                        <button @click="open = !open" type="button" class="inline-flex justify-between w-full h-fit px-6 py-2 text-lg font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50">
-                            <p class="mr-8">Harga</p>
-                            <i class="bi bi-chevron-down"></i>
-                        </button>
-                        </div>
-                        <div x-show="open" class="relative mt-2 w-full bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none" style="display: none;">
-                        <div class="py-1">
-                            <div class="px-4 py-2 text-sm text-gray-700">
-                            <label for="min-price" class="block text-sm font-medium text-gray-700">Harga Minimum</label>
-                            <input type="number" id="min-price" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Rp.">
-                            </div>
-                            <div class="px-4 py-2 text-sm text-gray-700">
-                            <label for="max-price" class="block text-sm font-medium text-gray-700">Harga Maksimum</label>
-                            <input type="number" id="max-price" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Rp.">
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="main-content w-full flex justify-center items-center mt-20 relative">
 
-                {{-- column data-filter --}}
-                <div class="w-[75%] h-full bg-white p-6 flex flex-col justify-start items-start border rounded-lg gap-4">
-                    {{-- TOP section column --}}
-                    <div class="flex flex-row justify-between items-center w-full">
-                        {{-- total detail data --}}
-                        <div class="w-[75%]">
-                            <h1>Menampilkan 10 provider untuk jasa (1 - 10 dari 1000)</h1>
-                        </div>
+            <!-- Elemen PETA Fullscreen -->
+            @yield('map-content')
 
-                        {{-- sort detail data --}}
-                        <div class="w-[25%] flex flex-row justify-center items-center gap-3">
-                            <h1 class="font-extrabold">Urutkan:</h1>
-                            <div class="relative text-left mt-3 w-full" x-data="{ open: false }">
-                                <div class="flex flex-row justify-center items-center w-full">
-                                    <button @click="open = !open" type="button" class="inline-flex justify-between items-center w-full h-fit mb-2 px-6 py-2 text-lg font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50">
-                                        <p class="mr-8 text-base w-fit">Ulasan</p>
-                                        <i class="bi bi-chevron-down"></i>
-                                    </button>
-                                </div>
-                                <div x-show="open" @click.away="open = false" class="absolute right-0 z-10 w-full origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none" style="display: none;">
-                                    <div class="py-1">
-                                        <div class="px-4 py-2 text-sm text-gray-700">
-                                            <label for="min-price" class="block text-sm font-medium text-gray-700">Harga Minimum</label>
-                                            <input type="number" id="min-price" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Rp.">
-                                        </div>
-                                        <div class="px-4 py-2 text-sm text-gray-700">
-                                            <label for="max-price" class="block text-sm font-medium text-gray-700">Harga Maksimum</label>
-                                            <input type="number" id="max-price" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Rp.">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {{-- MAIN section column --}}
-                    <div class="flex flex-col gap-6 w-full h-fit">
-                        <a href="{{ url('/detailjasa') }}">
-                            <div class="w-full h-44 bg-yellow-200 rounded-lg cursor-pointer">
-                                opsi 1
-                            </div>
-                        </a>
-                        <div class="w-full h-44 bg-yellow-200 rounded-lg cursor-pointer">opsi 2</div>
-                        <div class="w-full h-44 bg-yellow-200 rounded-lg cursor-pointer">opsi 3</div>
-                        <div class="w-full h-44 bg-yellow-200 rounded-lg cursor-pointer">opsi 4</div>
-                        <div class="w-full h-44 bg-yellow-200 rounded-lg cursor-pointer">opsi 5</div>
-                    </div>
-                </div>
-            </div>
         </section>
 
-        {{-- MAPS BUTTON --}}
-        <section class="pt-8 bg-gray-50">
-            <div class="flex justify-center items-center fixed z-50 w-full bottom-8" id="floatingButton">
-                <a href="{{ url('/locations') }}">
-                    <div class="bg-black h-[52px] w-40 p-2 rounded-full flex justify-center items-center hover:drop-shadow-lg cursor-pointer">
-                        <button class="justify-center items-center flex flex-row gap-2">
-                            <p class="text-base text-white font-medium">Tampilkan peta</p>
-                            <i class="bi bi-map text-base text-white font-semibold"></i>
-                        </button>
-                    </div>
-                </a>
-            </div>
+        <section class="mt-8">
+
+            <!-- Elemen Tampil LIST -->
+            @yield('list-content')
+
         </section>
 
-        {{-- FOOTER --}}
-        <section class="footer w-full text-center">
-            <hr>
-            <h4 class="mb-8 mt-5 font-bold">About Us</h4>
-            <p class="text-[#777777] tracking-wide text-base">
-                Hubungi kami untuk informasi teknis seputar proses dan pelaksanaan Layanan yang disediakan ole Babantu di menu Contact,<br>
-                Atau pilih menu About untuk membaca Tata Cara dalam menggunakan Layanan Babantu.
-            </p>
-            <div class="icons flex justify-center space-x-6 py-6">
-                <a href="#" class="text-red-600 cursor-pointer"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="text-red-600 cursor-pointer"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="text-red-600 cursor-pointer"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="text-red-600 cursor-pointer"><i class="bi bi-youtube"></i></a>
-            </div>
-            <p class="text-[#777777] text-base">Made With by | <b class="text-red-600 font-extrabold">Dakode</b></p>
-            <hr class="mt-3">
-            <div class="flex flex-row justify-between items-center w-full h-12 px-36">
-                <p class="text-red-600 font-extrabold">Babantu | <b class="text-[#777777] font-extralight text-base">Copyright © 2025 PT. Dakotech Services Technology</b></p>
-                <div class="flex flex-row gap-8">
-                    <p class="text-[#777777] text-base hover:text-gray-600 cursor-pointer">Kebijakan Privasi</p>
-                    <p class="text-[#777777] text-base hover:text-gray-600 cursor-pointer">Syarat dan Ketentuan</p>
-                </div>
-            </div>
-        </section>
+        {{-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> --}}
 
         <script type="text/javascript">
-            // hidden/show MAP
+            // to handle the scroll event
+            document.addEventListener('scroll', function() {
+                const searchBar = document.getElementById('search-bar');
+                const scrollY = window.scrollY || window.pageYOffset;
+
+                if (scrollY > 100) { // to adjust the value for scrolling
+                    // searchBar.classList.add('search-bar-fixed');
+                } else {
+                    // searchBar.classList.remove('search-bar-fixed');
+                }
+            });
+
+
+            // hidden/show MAP in category select
             let lastScrollTop = 0;
             const floatingButton = document.getElementById("floatingButton");
 

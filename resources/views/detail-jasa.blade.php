@@ -30,7 +30,7 @@
 
                 {{-- judul jasa --}}
                 <div class="h-fit">
-                    <h1 class="text-2xl font-extrabold">Judul jasa yang dipilih</h1>
+                    <h1 class="text-2xl font-extrabold">Service AC</h1>
                 </div>
 
                 {{-- deskripsi jasa --}}
@@ -54,59 +54,59 @@
                     <div class="container mx-auto mt-4">
                         <div class="bg-white shadow-md px-8 pt-6 pb-8 mb-4 border rounded-lg">
                             <ul class="divide-y divide-gray-200">
-                                <li class="flex items-center justify-between py-3">
+                                <li class="flex items-center justify-between py-3 counter">
                                     <div>
                                         <h2 class="text-xl font-medium">Category 1</h2>
                                         <p class="text-gray-500">Description of Category 1</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <button id="decrement" class="bg-red-500 text-white font-bold py-1 px-2 rounded">-</button>
-                                        <span id="number" class="mx-4 text-lg">0</span>
-                                        <button id="increment" class="bg-blue-500 text-white font-bold py-1 px-2 rounded">+</button>
+                                        <button class="decrement bg-white text-black font-bold py-1 px-3 rounded border hover:bg-gray-300 hover:text-white">-</button>
+                                        <span class="number mx-4 text-lg">0</span>
+                                        <button class="increment bg-white text-black font-bold py-1 px-2 rounded border hover:bg-red-500 hover:text-white">+</button>
                                     </div>
                                 </li>
-                                <li class="flex items-center justify-between py-3">
+                                <li class="flex items-center justify-between py-3 counter">
                                     <div>
                                         <h2 class="text-xl font-medium">Category 2</h2>
                                         <p class="text-gray-500">Description of Category 2</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <button class="bg-red-500 text-white px-2 py-1 rounded">-</button>
-                                        <span class="mx-2">0</span>
-                                        <button class="bg-blue-500 text-white px-2 py-1 rounded">+</button>
+                                        <button class="decrement bg-white text-black font-bold py-1 px-3 rounded border hover:bg-gray-300 hover:text-white">-</button>
+                                        <span class="number mx-4 text-lg">0</span>
+                                        <button class="increment bg-white text-black font-bold py-1 px-2 rounded border hover:bg-red-500 hover:text-white">+</button>
                                     </div>
                                 </li>
-                                <li class="flex items-center justify-between py-3">
+                                <li class="flex items-center justify-between py-3 counter">
                                     <div>
                                         <h2 class="text-xl font-medium">Category 3</h2>
                                         <p class="text-gray-500">Description of Category 3</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <button class="bg-red-500 text-white px-2 py-1 rounded">-</button>
-                                        <span class="mx-2">0</span>
-                                        <button class="bg-blue-500 text-white px-2 py-1 rounded">+</button>
+                                        <button class="decrement bg-white text-black font-bold py-1 px-3 rounded border hover:bg-gray-300 hover:text-white">-</button>
+                                        <span class="number mx-4 text-lg">0</span>
+                                        <button class="increment bg-white text-black font-bold py-1 px-2 rounded border hover:bg-red-500 hover:text-white">+</button>
                                     </div>
                                 </li>
-                                <li class="flex items-center justify-between py-3">
+                                <li class="flex items-center justify-between py-3 counter">
                                     <div>
                                         <h2 class="text-xl font-medium">Category 4</h2>
                                         <p class="text-gray-500">Description of Category 4</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <button class="bg-red-500 text-white px-2 py-1 rounded">-</button>
-                                        <span class="mx-2">0</span>
-                                        <button class="bg-blue-500 text-white px-2 py-1 rounded">+</button>
+                                        <button class="decrement bg-white text-black font-bold py-1 px-3 rounded border hover:bg-gray-300 hover:text-white">-</button>
+                                        <span class="number mx-4 text-lg">0</span>
+                                        <button class="increment bg-white text-black font-bold py-1 px-2 rounded border hover:bg-red-500 hover:text-white">+</button>
                                     </div>
                                 </li>
-                                <li class="flex items-center justify-between py-3">
+                                <li class="flex items-center justify-between py-3 counter">
                                     <div>
                                         <h2 class="text-xl font-medium">Category 5</h2>
                                         <p class="text-gray-500">Description of Category 5</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <button class="bg-red-500 text-white px-2 py-1 rounded">-</button>
-                                        <span class="mx-2">0</span>
-                                        <button class="bg-blue-500 text-white px-2 py-1 rounded">+</button>
+                                        <button class="decrement bg-white text-black font-bold py-1 px-3 rounded border hover:bg-gray-300 hover:text-white">-</button>
+                                        <span class="number mx-4 text-lg">0</span>
+                                        <button class="increment bg-white text-black font-bold py-1 px-2 rounded border hover:bg-red-500 hover:text-white">+</button>
                                     </div>
                                 </li>
                             </ul>
@@ -120,59 +120,59 @@
                     <div class="container mx-auto mt-4">
                         <div class="bg-white shadow-md px-8 pt-6 pb-8 mb-4 border rounded-lg">
                             <ul class="divide-y divide-gray-200">
-                                <li class="flex items-center justify-between py-3">
+                                <li class="flex items-center justify-between py-3 counter">
                                     <div>
                                         <h2 class="text-xl font-medium">Category 1</h2>
                                         <p class="text-gray-500">Description of Category 1</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <button class="bg-red-500 text-white px-2 py-1 rounded">-</button>
-                                        <span class="mx-2">0</span>
-                                        <button class="bg-blue-500 text-white px-2 py-1 rounded">+</button>
+                                        <button class="decrement bg-white text-black font-bold py-1 px-3 rounded border hover:bg-gray-300 hover:text-white">-</button>
+                                        <span class="number mx-4 text-lg">0</span>
+                                        <button class="increment bg-white text-black font-bold py-1 px-2 rounded border hover:bg-red-500 hover:text-white">+</button>
                                     </div>
                                 </li>
-                                <li class="flex items-center justify-between py-3">
+                                <li class="flex items-center justify-between py-3 counter">
                                     <div>
                                         <h2 class="text-xl font-medium">Category 2</h2>
                                         <p class="text-gray-500">Description of Category 2</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <button class="bg-red-500 text-white px-2 py-1 rounded">-</button>
-                                        <span class="mx-2">0</span>
-                                        <button class="bg-blue-500 text-white px-2 py-1 rounded">+</button>
+                                        <button class="decrement bg-white text-black font-bold py-1 px-3 rounded border hover:bg-gray-300 hover:text-white">-</button>
+                                        <span class="number mx-4 text-lg">0</span>
+                                        <button class="increment bg-white text-black font-bold py-1 px-2 rounded border hover:bg-red-500 hover:text-white">+</button>
                                     </div>
                                 </li>
-                                <li class="flex items-center justify-between py-3">
+                                <li class="flex items-center justify-between py-3 counter">
                                     <div>
                                         <h2 class="text-xl font-medium">Category 3</h2>
                                         <p class="text-gray-500">Description of Category 3</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <button class="bg-red-500 text-white px-2 py-1 rounded">-</button>
-                                        <span class="mx-2">0</span>
-                                        <button class="bg-blue-500 text-white px-2 py-1 rounded">+</button>
+                                        <button class="decrement bg-white text-black font-bold py-1 px-3 rounded border hover:bg-gray-300 hover:text-white">-</button>
+                                        <span class="number mx-4 text-lg">0</span>
+                                        <button class="increment bg-white text-black font-bold py-1 px-2 rounded border hover:bg-red-500 hover:text-white">+</button>
                                     </div>
                                 </li>
-                                <li class="flex items-center justify-between py-3">
+                                <li class="flex items-center justify-between py-3 counter">
                                     <div>
                                         <h2 class="text-xl font-medium">Category 4</h2>
                                         <p class="text-gray-500">Description of Category 4</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <button class="bg-red-500 text-white px-2 py-1 rounded">-</button>
-                                        <span class="mx-2">0</span>
-                                        <button class="bg-blue-500 text-white px-2 py-1 rounded">+</button>
+                                        <button class="decrement bg-white text-black font-bold py-1 px-3 rounded border hover:bg-gray-300 hover:text-white">-</button>
+                                        <span class="number mx-4 text-lg">0</span>
+                                        <button class="increment bg-white text-black font-bold py-1 px-2 rounded border hover:bg-red-500 hover:text-white">+</button>
                                     </div>
                                 </li>
-                                <li class="flex items-center justify-between py-3">
+                                <li class="flex items-center justify-between py-3 counter">
                                     <div>
                                         <h2 class="text-xl font-medium">Category 5</h2>
                                         <p class="text-gray-500">Description of Category 5</p>
                                     </div>
                                     <div class="flex items-center">
-                                        <button class="bg-red-500 text-white px-2 py-1 rounded">-</button>
-                                        <span class="mx-2">0</span>
-                                        <button class="bg-blue-500 text-white px-2 py-1 rounded">+</button>
+                                        <button class="decrement bg-white text-black font-bold py-1 px-3 rounded border hover:bg-gray-300 hover:text-white">-</button>
+                                        <span class="number mx-4 text-lg">0</span>
+                                        <button class="increment bg-white text-black font-bold py-1 px-2 rounded border hover:bg-red-500 hover:text-white">+</button>
                                     </div>
                                 </li>
                             </ul>
@@ -251,7 +251,7 @@
                 <div class="flex flex-row border-b-2 w-full h-[25%] justify-center items-center gap-4">
                     <input type="checkbox">
                     <div class="flex flex-row justify-between gap-1">
-                        <p class="flex justify-center items-center text-[#777777]">Dengan melanjutkan, Kamu setuju untuk membagikan profil Kamu dengan rekan kami JasaKu<p class="cursor-pointer text-[#777777] hover:text-red-700">Lihat Detail</p></p>
+                        <p class="flex justify-center items-center text-[#777777]">Dengan melanjutkan, Kamu setuju untuk membagikan profil Kamu dengan rekan kami Babantu<p class="cursor-pointer text-[#777777] hover:text-red-700">Lihat Detail</p></p>
                     </div>
                 </div>
 
@@ -270,7 +270,7 @@
                     </div>
                     <div class="w-1/5 h-full flex justify-center items-center">
                         <div class="flex justify-end items-center h-full">
-                            <button class="px-20 py-3 bg-green-400 text-white text-lg font-bold rounded-md hover:bg-green-600 hover:shadow-lg">
+                            <button class="px-20 py-3 bg-[#F33661] hover:bg-red-600 text-white text-lg font-bold rounded-md hover:shadow-lg">
                                 Selanjutnya
                             </button>
                         </div>
@@ -280,23 +280,53 @@
         </section>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const decrementButton = document.getElementById('decrement');
-            const incrementButton = document.getElementById('increment');
-            const numberDisplay = document.getElementById('number');
-            let number = 0;
-
-            decrementButton.addEventListener('click', function () {
-                number--;
-                numberDisplay.textContent = number;
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Select all counter containers
+                const counters = document.querySelectorAll('.counter');
+            
+                // Define minimum and maximum values
+                const MIN_NUMBER = 0;
+                const MAX_NUMBER = 10;
+            
+                // Loop through each counter container
+                counters.forEach(function(counter) {
+                    // Get the elements within the current counter
+                    const decrementButton = counter.querySelector('.decrement');
+                    const incrementButton = counter.querySelector('.increment');
+                    const numberDisplay = counter.querySelector('.number');
+            
+                    // Initialize the number (you can also set this dynamically)
+                    let number = parseInt(numberDisplay.textContent);
+            
+                    // Function to update button states
+                    function updateButtonStates() {
+                        decrementButton.disabled = number <= MIN_NUMBER;
+                        incrementButton.disabled = number >= MAX_NUMBER;
+                    }
+            
+                    // Initialize button states
+                    updateButtonStates();
+            
+                    // Add event listener for decrement button
+                    decrementButton.addEventListener('click', function () {
+                        if (number > MIN_NUMBER) {
+                            number--;
+                            numberDisplay.textContent = number;
+                            updateButtonStates();
+                        }
+                    });
+            
+                    // Add event listener for increment button
+                    incrementButton.addEventListener('click', function () {
+                        if (number < MAX_NUMBER) {
+                            number++;
+                            numberDisplay.textContent = number;
+                            updateButtonStates();
+                        }
+                    });
+                });
             });
-
-            incrementButton.addEventListener('click', function () {
-                number++;
-                numberDisplay.textContent = number;
-            });
-        });
-    </script>
+        </script>
     </body>
 </html>
