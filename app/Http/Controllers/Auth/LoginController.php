@@ -36,23 +36,20 @@ class LoginController extends Controller
         $hashedPassword = $customer->password;
         $plainTextPassword = $request->input('password_login');
 
+        $credentials = [
+            'phone_number' => $request->input('phone_login'),
+            'password' => $request->input('password_login'),
+        ];
+
         // Attempt to log in
-        if ($customer && Hash::check($plainTextPassword, $hashedPassword)) {
-           // get info user
-            Auth::login($customer);
-
-            if (Auth::check()) {
-                $customer = Auth::user();
-                session()->put('customer', $customer);
-
-                // Authentication passed
-                return redirect()->route('beranda')->with('success', 'Selamat datang, ' . $customer->customer_name . '!');
-            }
-
-        } else {
-            // Authentication failed
-            return back()->withErrors(['password' => 'Kata sandi yang Anda masukkan salah.'])->withInput();
+        if (Auth::guard('customer')->attempt([
+            'phone_number' => $request->phone_login,
+            'password' => $request->password_login
+        ])) {
+            return redirect()->route('beranda')->with('success', 'Login successful!');
         }
+    
+        return back()->withErrors(['password_login' => 'Invalid credentials.']);
     }
 
     public function logout(Request $request)
