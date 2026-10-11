@@ -61,7 +61,7 @@
                                 <a href="{{ url('profile') }}" id="" class="block px-4 py-2 text-base text-gray-800 hover:bg-gray-100 cursor-pointer z-50 mb-2 hover:font-bold">Profil</a>
                             </div>
                             <div class="border-b-2">
-                                <a href="{{ url('jasaku') }}" class="block px-4 py-2 text-base text-gray-800 hover:bg-gray-100 cursor-pointer z-50 mb-2 mt-2 hover:font-bold hover:text-[#F33661]">Buka Jasa Gratis</a>
+                                <a href="{{ url('jasaku') }}" class="block px-4 py-2 text-base text-gray-800 hover:bg-gray-100 cursor-pointer z-50 mb-2 mt-2 hover:font- hover:text-[#F33661]">Buka Jasa Gratis</a>
                             </div>
                             <div class="">
                                 <a href="#" class="block px-4 py-2 text-base text-gray-800 hover:bg-gray-100 cursor-pointer z-50 mt-2">Pengaturan</a>

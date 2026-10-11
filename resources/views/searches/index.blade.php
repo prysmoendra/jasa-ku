@@ -159,7 +159,7 @@
             </div>
 
             {{-- column data-filter --}}
-            <div class="w-[75%] h-full bg-gray-50 p-6 flex flex-col justify-start items-start border rounded-lg gap-4">
+            <div class="w-[75%] h-full bg-white p-6 flex flex-col justify-start items-start border rounded-lg gap-4">
                 {{-- TOP section column --}}
                 <div class="flex flex-row justify-between items-center w-full">
                     {{-- total detail data --}}
@@ -207,22 +207,22 @@
                 <div class="flex flex-col gap-6 w-full h-fit">
                     @foreach ($providers as $provider)
                     <a href="{{ url('/detailjasa') }}">
-                        <div class="w-full h-44 px-6 py-4 bg-white rounded-lg cursor-pointer flex flex-row gap-2">
+                        <div class="w-full h-44 px-6 py-4 bg-white border rounded-lg cursor-pointer flex flex-row gap-2 hover:bg-gray-50">
                             {{-- foto jasa --}}
                             <div class="w-[15%] flex justify-center items-center">
                                 <img src="{{ asset('images/jasa-ac1.png') }}" alt="Les Privat" class="w-full h-full rounded-md">
                             </div>
                             {{-- deskripsi jasa --}}
                             <div class="w-[85%] p-3 flex flex-col justify-start items-start gap-1">
-                                <p class="text-xs">Semper Barat, jakarta utara</p>
-                                <h1 class="text-base font-extrabold">Service AC Jaya</h1>
+                                <p class="text-xs">{{ ucwords(strtolower($provider->location->kota)) }}, {{ ucwords(strtolower($provider->location->prov)) }}</p>
+                                <h1 class="text-base font-extrabold">{{ $provider->provider_name }}</h1>
                                 <p class="text-sm">Menerima service Ac rumahan, kantor, ruko, pabrik, dan Sekolahan,Menerima Pemasangan Ac Perbaikan segala merek Ac Perawatan rutin Bongkar pasang Ac Isi preon dll. ,Bahasa Indonesia,Selamat datang di Nisa teknik Kami Nisa teknik jasa layanan resmi service Ac yang telah berpengalaman...</p>
                             </div>
                         </div>
                     </a>
                     @endforeach
                     
-                    <div class="w-full h-44 px-6 py-4 bg-white rounded-lg cursor-pointer flex flex-row gap-2">
+                    <div class="w-full h-44 px-6 py-4 bg-white border rounded-lg cursor-pointer flex flex-row gap-2 hover:bg-gray-50">
                         {{-- foto jasa --}}
                         <div class="w-[15%] flex justify-center items-center">
                             <img src="{{ asset('images/jasa-ac4.png') }}" alt="Les Privat" class="w-full h-full rounded-md">
@@ -235,7 +235,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full h-44 px-6 py-4 bg-white rounded-lg cursor-pointer flex flex-row gap-2">
+                    <div class="w-full h-44 px-6 py-4 bg-white border rounded-lg cursor-pointer flex flex-row gap-2 hover:bg-gray-50">
                         {{-- foto jasa --}}
                         <div class="w-[15%] flex justify-center items-center">
                             <img src="{{ asset('images/jasa-ac2.png') }}" alt="Les Privat" class="w-full h-full rounded-md">
@@ -248,7 +248,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full h-44 px-6 py-4 bg-white rounded-lg cursor-pointer flex flex-row gap-2">
+                    <div class="w-full h-44 px-6 py-4 bg-white border rounded-lg cursor-pointer flex flex-row gap-2 hover:bg-gray-50">
                         {{-- foto jasa --}}
                         <div class="w-[15%] flex justify-center items-center">
                             <img src="{{ asset('images/jasa-ac3.png') }}" alt="Les Privat" class="w-full h-full rounded-md">

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('service_providers', function (Blueprint $table) {
             $table->id('provider_id'); // Primary Key
             $table->string('provider_name', 255); // Provider name
+            $table->string('provider_desc', 255); // Provider description
             $table->foreignId('customer_id')->constrained('customers', 'customer_id')->onDelete('cascade'); // Foreign Key to Customer
             $table->foreignId('category_id')->nullable()->constrained('categories', 'category_id')->onDelete('cascade'); // Foreign Key to category
             $table->foreignId('sub_category_id')->nullable()->constrained('sub_categories', 'sub_category_id')->onDelete('cascade'); // Foreign Key to sub_categories
